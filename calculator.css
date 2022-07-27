@@ -1,0 +1,74 @@
+body {
+  font-family: helvetica;
+  background: silver;
+  color: white;
+  text-align: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;box-sizing: border-box;
+    font-family: cursive;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(./mountain1.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: all .5s;
+
+}
+.calculator{
+    display: grid;
+}
+.calculator .value{
+    grid-column: span 4;
+    height: 100px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+}
+
+.calculator span{
+    display: grid;
+    width: 70px;
+    height: 70px;
+    color: white;
+    background-color: rgb(105, 105, 105);
+    place-items: center;
+    border: 1px solid rgb(0, 0, 0);
+    user-select: none;
+}
+.calculator span:active{
+    background-color: #74ff3b;
+}
+.calculator span.clear{
+    grid-column: span 2;
+    width: 140px;
+    background-color: rgb(217, 93, 103);
+}
+.calculator span.clear:active{
+    background-color: rgb(217, 93, 103);
+
+}
+.calculator span.plus{
+    grid-row: span 2;
+    height: 140px;
+}
+.calculator span.equal{
+ background-color: rgb(255, 165, 0);
+}
+
+.calculator span.equal:active{
+ background-color: rgb(255, 165, 0);
+}
+#check:checked ~ section{
+margin-left: 250px;
+}
